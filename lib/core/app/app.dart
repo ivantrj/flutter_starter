@@ -12,6 +12,8 @@ class ScalableFlutterApp extends StatelessWidget {
       child: MaterialApp.router(
         title: 'Scalable Flutter App',
         theme: lightTheme,
+        darkTheme: darkTheme,
+        themeMode: ThemeMode.system,
         debugShowCheckedModeBanner: false,
         routerConfig: router,
       ),
