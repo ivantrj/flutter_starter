@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 enum AppRoute {
-  splash('/'),
-  home('/home'),
+  home('/'),
   settings('/settings'),
   auth('/auth'),
   ;
