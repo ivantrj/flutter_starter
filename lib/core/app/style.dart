@@ -43,9 +43,6 @@ final _lightColorScheme = ColorScheme(
   // Error
   error: _red,
   onError: _lightest,
-  // Background
-  background: _background,
-  onBackground: _darkest,
   // Surface
   surface: _lightest,
   onSurface: _darkest,
@@ -65,8 +62,6 @@ final _darkColorScheme = ColorScheme(
   onSecondaryContainer: _darkDarkest,
   error: _darkRed,
   onError: _darkLightest,
-  background: _darkBackground,
-  onBackground: _darkDarkest,
   surface: _darkDarkest,
   onSurface: _darkLightest,
   outline: _darkDivider,
@@ -95,7 +90,7 @@ ThemeData _getLightTheme() {
     colorScheme: colorScheme,
     textTheme: textTheme,
     primaryTextTheme: primaryTextTheme,
-    scaffoldBackgroundColor: colorScheme.background,
+    scaffoldBackgroundColor: colorScheme.surface,
     disabledColor: _disabled,
     dividerTheme: const DividerThemeData(
       color: _divider,
@@ -123,7 +118,7 @@ ThemeData _getLightTheme() {
     ),
     popupMenuTheme: PopupMenuThemeData(
       color: _background,
-      surfaceTintColor: colorScheme.background,
+      surfaceTintColor: colorScheme.surface,
     ),
     bottomSheetTheme: const BottomSheetThemeData(
       showDragHandle: false,
@@ -149,8 +144,8 @@ ThemeData _getLightTheme() {
       backgroundColor: _background,
     ),
     dialogTheme: DialogTheme(
-      backgroundColor: colorScheme.background,
-      surfaceTintColor: colorScheme.background,
+      backgroundColor: colorScheme.surface,
+      surfaceTintColor: colorScheme.surface,
       titleTextStyle: textTheme.titleLarge,
     ),
     snackBarTheme: SnackBarThemeData(
@@ -246,7 +241,7 @@ ThemeData _getDarkTheme() {
     colorScheme: darkColorScheme, // Use the dark color scheme
     textTheme: darkTextTheme,
     primaryTextTheme: primaryDarkTextTheme,
-    scaffoldBackgroundColor: darkColorScheme.background,
+    scaffoldBackgroundColor: darkColorScheme.surface,
     disabledColor: _darkDisabled, // Use the dark disabled color
     dividerTheme: const DividerThemeData(
       color: _darkDivider, // Use the dark divider color
@@ -274,7 +269,7 @@ ThemeData _getDarkTheme() {
     ),
     popupMenuTheme: PopupMenuThemeData(
       color: _darkBackground, // Use the dark background color
-      surfaceTintColor: darkColorScheme.background,
+      surfaceTintColor: darkColorScheme.surface,
     ),
     bottomSheetTheme: const BottomSheetThemeData(
       showDragHandle: false,
@@ -300,8 +295,8 @@ ThemeData _getDarkTheme() {
       backgroundColor: _darkBackground, // Use the dark background color
     ),
     dialogTheme: DialogTheme(
-      backgroundColor: darkColorScheme.background,
-      surfaceTintColor: darkColorScheme.background,
+      backgroundColor: darkColorScheme.surface,
+      surfaceTintColor: darkColorScheme.surface,
       titleTextStyle: darkTextTheme.titleLarge,
     ),
     snackBarTheme: SnackBarThemeData(
