@@ -58,12 +58,12 @@ class _HomePageState extends State<HomePage> {
       bottomNavigationBar = null;
     } else {
       body = SafeArea(child: content);
-      bottomNavigationBar = BottomNavigationBar(
-        currentIndex: _selectedIndex,
-        onTap: (index) => setState(() => _selectedIndex = index),
-        items: [
+      bottomNavigationBar = NavigationBar(
+        selectedIndex: _selectedIndex,
+        onDestinationSelected: (index) => setState(() => _selectedIndex = index),
+        destinations: [
           for (final tab in _tabs)
-            BottomNavigationBarItem(
+            NavigationDestination(
               label: tab.label,
               icon: Icon(tab.icon),
             ),
